@@ -14,9 +14,7 @@ body {
     grid-template-columns: 1.2fr 4fr;
     grid-template-rows: 1fr 4fr;
 }
-.container > * {
-    /* border: solid red 3px; */
-}
+
 .sidebar img {
     filter: invert(100%); 
 }
@@ -54,12 +52,6 @@ body {
     gap: 15px 0px;
 }
 
-.sideMiddle > * {
-    /* border: solid blue; */
-}
-.sidebar > * {
-    /* border: solid yellow; */
-}
 .sidebar .logo {
     width: 50px;
     justify-self: center;
@@ -78,7 +70,6 @@ body {
 }
 .headerTop {
     grid-row: 1;
-    
     display: flex;
     justify-content: space-between;
 }
@@ -140,4 +131,88 @@ h3 {
     background-color: #dddfd9;
     grid-column: 2;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 15px;
+    gap: 20px;
+}
+.projectsSection {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.projectCard {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: solid rgb(178, 187, 156) 15px;
+    transition: all .5s;
+}
+.projectCard h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5px;
+}
+.projectCard p {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(81, 81, 81);
+    font-size: 15px;
+}
+.projectCard:hover {
+    border-left: solid rgb(130, 149, 108) 15px;
+    height: 17vh
+}
+.otherSection {
+    grid-column: 2;
+}
+.classIcon {
+    width: 15px;
+}
+#timelineHeading {
+    margin-top: 10px;
+}
+.announcements, 
+.timeline {
+    padding: 15px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    
+}
+.rightSection p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.rightSection h5 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.announcementCard {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+#profile-picture,
+#profile-welcome,
+#notif {
+    transition: all .5s;
+}
+#profile-picture:hover, 
+#profile-welcome:hover, 
+#notif:hover {
+    transform: rotate(9deg);
+}
+.sidebar h3, .sideTop h1 {
+    transition: all .3s;
+}
+.sidebar h3:hover,
+.sideTop h1:hover {
+    color: #bdbdbd;
 }
